@@ -571,9 +571,14 @@ textarea:focus,
 #s-manager{background:linear-gradient(160deg,#060d1a 0%,#0f1729 50%,#06150a 100%);}
 .mgr-badge{display:inline-block;padding:3px 12px;border-radius:20px;font-size:11px;font-weight:800;
   text-transform:uppercase;letter-spacing:1px;margin-left:8px;vertical-align:middle;}
+.brand .mgr-badge{
+  -webkit-background-clip:border-box;
+  background-clip:border-box;
+  -webkit-text-fill-color:currentColor;
+}
 .mgr-badge.manager{
   background:linear-gradient(135deg,rgba(251,191,36,0.2),rgba(251,191,36,0.08));
-  color:#fbbf24;border:1px solid rgba(251,191,36,0.35);
+  color:#fff;border:1px solid rgba(251,191,36,0.35);
 }
 .mgr-badge.chairman{
   background:linear-gradient(135deg,rgba(255,77,106,0.2),rgba(255,77,106,0.08));
