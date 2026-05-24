@@ -1438,6 +1438,7 @@ window.addEventListener('beforeunload',()=>{
       </div><!-- /admin-content -->
     </div><!-- /admin-layout -->
   </div><!-- /abody -->
+  </div><!-- /app -->
 <!-- MANAGER / CHAIRMAN SCREEN -->
 <div class="screen" id="s-manager">
   <div class="topbar">
@@ -1773,7 +1774,7 @@ window.addEventListener('beforeunload',()=>{
   </div>
   <!-- Teacher drawer nav -->
   <div style="background:rgba(0,0,0,.25);display:flex;gap:8px;padding:10px 16px;overflow-x:auto;flex-shrink:0;">
-    <button class="t-dnav active" id="tdnav-classes" onclick="tTab('classes',this)" 
+    <button class="t-dnav active" id="tdnav-classes" onclick="tTab('classes',this)"
       style="flex-shrink:0;padding:8px 14px;border:none;border-radius:10px;font-family:'Baloo 2',sans-serif;
       font-size:12px;font-weight:700;cursor:pointer;background:var(--g);color:#fff;transition:all .2s;">
       📚 Classes</button>
@@ -2711,7 +2712,7 @@ function mgrTab(name, el){
   else if(name==='homework')renderMgrHomework();
   else if(name==='finance')renderMgrFinance();
   // ADD THIS NEW CONDITION
-  else if(name==='analytics'){ 
+  else if(name==='analytics'){
     if(window.renderChairmanAnalytics) window.renderChairmanAnalytics();
     else console.warn('chairman-analytics.js not loaded yet');
   }
@@ -4670,9 +4671,9 @@ window.renderAlarmsList = function renderAlarmsList(){
       <div class="li-info">
         <div class="li-title">${a.teacher} — ${a.subject}</div>
         <div class="li-sub">
-          ⏰ <strong>${fmt(a.time)}</strong> • 
-          ${a.day} • 
-          ${a.repeat===999?'Until dismissed':a.repeat+'x rings'} • 
+          ⏰ <strong>${fmt(a.time)}</strong> •
+          ${a.day} •
+          ${a.repeat===999?'Until dismissed':a.repeat+'x rings'} •
           ${a.duration}s
         </div>
       </div>
