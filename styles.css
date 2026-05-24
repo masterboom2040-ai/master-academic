@@ -1536,3 +1536,162 @@ body{font-family:Calibri,Arial,sans-serif;font-size:11pt;}
   top: -20px;
   animation: confettiFall linear infinite;
 }
+
+/* Dark role screens: keep generated cards/readable text consistent */
+#s-manager,
+#s-teacher,
+#s-student{
+  --bg:#0f172a;
+  --bg-flat:#0f172a;
+  --card:#1e293b;
+  --text:#f8fafc;
+  --dark:#f8fafc;
+  --muted:rgba(226,232,240,.72);
+  --border:rgba(255,255,255,.16);
+  background:linear-gradient(160deg,#060d1a 0%,#0f1729 52%,#06150a 100%) !important;
+  color:var(--text);
+}
+
+#s-student .stbody,
+#s-student .spanel{
+  background:transparent;
+}
+
+#s-manager .stitle,
+#s-teacher .stitle,
+#s-student .stitle{
+  color:var(--text) !important;
+}
+
+#s-manager :is(.card,.mgr-card,.li,.ncard,.rcard,.mbody,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card,.trout-card,.scan-log,details),
+#s-teacher :is(.card,.mgr-card,.li,.ncard,.rcard,.mbody,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card,.trout-card,.scan-log,details),
+#s-student :is(.card,.mgr-card,.li,.ncard,.rcard,.mbody,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card,.trout-card,.scan-log,details){
+  background:rgba(30,41,59,.92) !important;
+  color:var(--text) !important;
+  border-color:rgba(255,255,255,.14) !important;
+  box-shadow:0 4px 22px rgba(0,0,0,.28),0 1px 0 rgba(255,255,255,.08) inset !important;
+}
+
+#s-manager :is(.li,.ncard,.rcard,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card):hover,
+#s-teacher :is(.li,.ncard,.rcard,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card):hover,
+#s-student :is(.li,.ncard,.rcard,.witem,.shcard,.att-week-card,.att-day,.t-att-week,.hw-card,.t-hw-card,.exam-card,.due-banner,.leader-section,.leader-card,.quiz-q-card,.qexam-question-card,.lp-card):hover{
+  background:#273449 !important;
+}
+
+#s-manager :is(table,thead,tbody,tr,th,td,.tbl tr:hover td),
+#s-teacher :is(table,thead,tbody,tr,th,td,.tbl tr:hover td),
+#s-student :is(table,thead,tbody,tr,th,td,.tbl tr:hover td){
+  background:#1e293b !important;
+  color:var(--text) !important;
+  border-color:rgba(255,255,255,.14) !important;
+}
+
+#s-manager :is(.li-title,.li-sub,.nt,.nb,.nd,.rcclass,.rcdate,.wtitle,.wsub,.sht,.shs,.hw-body,.exam-subj,.exam-info,.leader-name,.leader-pos,.leader-title,.due-banner-title,.due-banner-body,.att-week-title,.nmodal-title,h3,h4,p,label,summary,td,th,span,div),
+#s-teacher :is(.li-title,.li-sub,.nt,.nb,.nd,.rcclass,.rcdate,.wtitle,.wsub,.sht,.shs,.hw-body,.exam-subj,.exam-info,.leader-name,.leader-pos,.leader-title,.due-banner-title,.due-banner-body,.att-week-title,.nmodal-title,h3,h4,p,label,summary,td,th,span,div),
+#s-student :is(.li-title,.li-sub,.nt,.nb,.nd,.rcclass,.rcdate,.wtitle,.wsub,.sht,.shs,.hw-body,.exam-subj,.exam-info,.leader-name,.leader-pos,.leader-title,.due-banner-title,.due-banner-body,.att-week-title,.nmodal-title,h3,h4,p,label,summary,td,th,span,div){
+  color:inherit;
+}
+
+#s-manager :is(.li-title,.nt,.rcclass,.wtitle,.sht,.exam-subj,.leader-name,.leader-title,.due-banner-title,.att-week-title,h3,h4),
+#s-teacher :is(.li-title,.nt,.rcclass,.wtitle,.sht,.exam-subj,.leader-name,.leader-title,.due-banner-title,.att-week-title,h3,h4),
+#s-student :is(.li-title,.nt,.rcclass,.wtitle,.sht,.exam-subj,.leader-name,.leader-title,.due-banner-title,.att-week-title,h3,h4){
+  color:var(--text) !important;
+}
+
+#s-manager :is(.li-sub,.nb,.nd,.rcdate,.wsub,.shs,.exam-info,.leader-pos,.due-banner-body,p),
+#s-teacher :is(.li-sub,.nb,.nd,.rcdate,.wsub,.shs,.exam-info,.leader-pos,.due-banner-body,p),
+#s-student :is(.li-sub,.nb,.nd,.rcdate,.wsub,.shs,.exam-info,.leader-pos,.due-banner-body,p){
+  color:var(--muted) !important;
+}
+
+#s-manager :is(input:not([type=checkbox]):not([type=radio]),select,textarea),
+#s-teacher :is(input:not([type=checkbox]):not([type=radio]),select,textarea),
+#s-student :is(input:not([type=checkbox]):not([type=radio]),select,textarea){
+  background:rgba(255,255,255,.08) !important;
+  color:var(--text) !important;
+  -webkit-text-fill-color:var(--text) !important;
+  border-color:rgba(255,255,255,.16) !important;
+}
+
+#s-manager input::placeholder,
+#s-manager textarea::placeholder,
+#s-teacher input::placeholder,
+#s-teacher textarea::placeholder,
+#s-student input::placeholder,
+#s-student textarea::placeholder{
+  color:rgba(226,232,240,.48) !important;
+  -webkit-text-fill-color:rgba(226,232,240,.48) !important;
+}
+
+#s-manager select option,
+#s-teacher select option,
+#s-student select option{
+  background:#0f172a !important;
+  color:#f8fafc !important;
+}
+
+#s-manager :is(.sfb,.exam-badge,.leader-marks span),
+#s-teacher :is(.sfb,.exam-badge,.leader-marks span),
+#s-student :is(.sfb,.exam-badge,.leader-marks span){
+  background:#273449 !important;
+  color:var(--text) !important;
+  border-color:rgba(255,255,255,.16) !important;
+}
+
+#s-manager .sfb.active,
+#s-teacher .sfb.active,
+#s-student .sfb.active{
+  background:linear-gradient(135deg,#00e5a0,#4f8ef7) !important;
+  color:#fff !important;
+  border-color:transparent !important;
+}
+
+#s-manager :is(.att-day.present,.att-day.absent,.hw-due,.notice-img),
+#s-teacher :is(.att-day.present,.att-day.absent,.hw-due,.notice-img),
+#s-student :is(.att-day.present,.att-day.absent,.hw-due,.notice-img){
+  background:rgba(255,255,255,.08) !important;
+}
+
+#s-student .dnav,
+#s-student .stopbar{
+  background:linear-gradient(90deg,#07111f,#0f172a) !important;
+}
+
+#s-manager [style*="background:#fff"],
+#s-manager [style*="background: #fff"],
+#s-manager [style*="background:#f5f5f5"],
+#s-manager [style*="background:#f0f0f0"],
+#s-manager [style*="background:#f3f3f3"],
+#s-manager [style*="background:#f8fafc"],
+#s-teacher [style*="background:#fff"],
+#s-teacher [style*="background: #fff"],
+#s-teacher [style*="background:#f5f5f5"],
+#s-teacher [style*="background:#f0f0f0"],
+#s-teacher [style*="background:#f3f3f3"],
+#s-teacher [style*="background:#f8fafc"],
+#s-student [style*="background:#fff"],
+#s-student [style*="background: #fff"],
+#s-student [style*="background:#f5f5f5"],
+#s-student [style*="background:#f0f0f0"],
+#s-student [style*="background:#f3f3f3"],
+#s-student [style*="background:#f8fafc"]{
+  background:#1e293b !important;
+}
+
+#s-manager [style*="color:#000"],
+#s-manager [style*="color:#111"],
+#s-manager [style*="color:#1a2340"],
+#s-manager [style*="color:#1e293b"],
+#s-manager [style*="color:var(--dark)"],
+#s-teacher [style*="color:#000"],
+#s-teacher [style*="color:#111"],
+#s-teacher [style*="color:#1a2340"],
+#s-teacher [style*="color:#1e293b"],
+#s-teacher [style*="color:var(--dark)"],
+#s-student [style*="color:#000"],
+#s-student [style*="color:#111"],
+#s-student [style*="color:#1a2340"],
+#s-student [style*="color:#1e293b"],
+#s-student [style*="color:var(--dark)"]{
+  color:var(--text) !important;
+}
